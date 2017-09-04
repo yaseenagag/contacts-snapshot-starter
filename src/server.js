@@ -9,6 +9,11 @@ const session = require('express-session')
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views')
 
+app.use(session(
+  {
+    secret: 'testesttestsdfsdfsdf'
+  }
+));
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }))

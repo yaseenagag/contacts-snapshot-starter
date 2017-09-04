@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>Log In</title>
+</header>
+
+<body>
+  <form method="POST" action="/users/loginuser">
+    <h1>Log In</h1>
+    <label for="username"> Username: </label>
+    <input type="text" name="username" id="username" />
+    <label for="password"> Password: </label>
+    <input type="text" name="password" id="password" />
+    <input type="submit" />
+  </form>
+
+  <% if (error === true) {%>
+    <p style="color:red">
+      Please verify your username and/or password.
+    </p>
+    <% } %>
+
+</body>
+
+</html>
